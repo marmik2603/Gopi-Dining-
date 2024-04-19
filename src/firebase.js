@@ -2,14 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getDatabase, ref, get, set } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAfyuEnk1d2LUmhjfblzgxOnkpVo9HkQx0",
-  authDomain: "qr-dining-serverside.firebaseapp.com",
-  databaseURL: "https://qr-dining-serverside-default-rtdb.firebaseio.com",
-  projectId: "qr-dining-serverside",
-  storageBucket: "qr-dining-serverside.appspot.com",
-  messagingSenderId: "498289420577",
-  appId: "1:498289420577:web:639a069367bb6095273660",
-  measurementId: "G-F6ERS038LX"
+  apiKey: "AIzaSyBzP3DICsN9_WMY3icnjgw-Nil6EUF3sWo",
+  authDomain: "gopi-dining-website.firebaseapp.com",
+  databaseURL: "https://gopi-dining-website-default-rtdb.firebaseio.com",
+  projectId: "gopi-dining-website",
+  storageBucket: "gopi-dining-website.appspot.com",
+  messagingSenderId: "863606319699",
+  appId: "1:863606319699:web:ab53b2469ca162dbab74a6",
+  measurementId: "G-3N8TZRMYWP"
 };
 
 initializeApp(firebaseConfig);
