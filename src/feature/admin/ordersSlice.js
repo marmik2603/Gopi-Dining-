@@ -1,5 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import { getFunction } from "../../firebase";
+import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
   loading: false,
@@ -7,32 +6,18 @@ const initialState = {
   error: null
 }
 
-export const getOrders = createAsyncThunk(
-  'menu/getMenu',
-  async () => {
-    const resp = await getFunction('/admin/orders')
-    return resp;
-  }
-)
-
 const ordersSlice = createSlice({
   name: 'orders',
   initialState,
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(getOrders.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(getOrders.fulfilled, (state, action) => {
-        state.loading = false;
-        state.orders = action.payload;
-      })
-      .addCase(getOrders.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message
-      })
+  reducers: {
+    setOrders: (state, action) => {
+      state.orders = action.payload;
+    },
+    removeOrder: (state, action) => {
+      delete state.orders[action.payload];
+    },
   }
 })
 
 export default ordersSlice.reducer;
+export const { setOrders, removeOrder } = ordersSlice.actions;

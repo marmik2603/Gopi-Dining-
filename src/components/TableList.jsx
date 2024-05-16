@@ -2,6 +2,7 @@ import { RadioGroup } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 import PropTypes from 'prop-types';
 import Heading from './Heading';
+import Badge from './Badge';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -13,18 +14,20 @@ const TableList = ({ selected, setSelected, tables }) => {
       <Heading size='3xl' content='Select your table' />
 
       <div>
-        <RadioGroup value={selected} onChange={setSelected}>
+        <RadioGroup value={selected} onChange={setSelected} >
           <RadioGroup.Label className="sr-only">Table Numbers</RadioGroup.Label>
           <div className="space-y-2">
             {tables && tables.map(table => (
               <RadioGroup.Option
                 key={table.number}
                 value={table}
+                disabled={!table.available}
                 className={({ checked, active }) =>
                   classNames(
                     checked ? 'border-transparent' : 'border-gray-300',
                     active ? 'border-yellow-500 ring-2 ring-yellow-500' : '',
-                    'cursor-pointer text-xl border bg-white px-8 py-6 shadow-sm focus:outline-none w-80 rounded-lg'
+                    !table.available ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer',
+                    'text-xl border bg-white px-8 py-6 shadow-sm focus:outline-none w-80 rounded-lg'
                   )
                 }
               >
@@ -40,6 +43,7 @@ const TableList = ({ selected, setSelected, tables }) => {
                         ) : (
                           checked && <CheckCircleIcon className="h-7 w-7 text-yellow-500 invisible" aria-hidden="true" />
                         )}
+                        <Badge available={table.available} />
                       </span>
                     </span>
                   </>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import TableList from "../components/TableList"
 import { useDispatch, useSelector } from "react-redux"
-import { getTable } from "../feature/table/tableSlice"
+import { subscribeToTables } from "../feature/table/tableSlice"
 import Loading from "../components/Loading"
 import { Link } from "react-router-dom"
 import { selectTable } from "../feature/user/userSlice"
@@ -16,7 +16,7 @@ function Table() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getTable())
+    dispatch(subscribeToTables())
   }, [dispatch])
 
   if (loading) return <Loading text="Processing..." />

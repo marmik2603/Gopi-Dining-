@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import { getFunction } from "../../firebase"
+import { getDatabase, onValue, ref } from "firebase/database";
 
 const initialState = {
   loading: false,
@@ -7,29 +7,36 @@ const initialState = {
   error: null
 }
 
-export const getTable = createAsyncThunk(
-  'tables/getTables',
-  async () => {
-    const resp = await getFunction('/tables')
-    return resp;
+export const subscribeToTables = createAsyncThunk(
+  'tables/subscribeToTables',
+  async (_, { dispatch }) => {
+    const db = getDatabase();
+    const tablesRef = ref(db, '/api/tables');
+    onValue(tablesRef, (snapshot) => {
+      const tables = snapshot.val();
+      dispatch(setTables(tables));
+    });
   }
 )
 
 const tableSlice = createSlice({
   name: 'table',
   initialState,
-  reducers: {},
+  reducers: {
+    setTables: (state, action) => {
+      state.tables = action.payload;
+    }
+  },
   extraReducers: (builder) => {
     builder
-      .addCase(getTable.pending, (state) => {
+      .addCase(subscribeToTables.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(getTable.fulfilled, (state, action) => {
+      .addCase(subscribeToTables.fulfilled, (state) => {
         state.loading = false;
-        state.tables = action.payload;
       })
-      .addCase(getTable.rejected, (state, action) => {
+      .addCase(subscribeToTables.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });
@@ -37,3 +44,4 @@ const tableSlice = createSlice({
 })
 
 export default tableSlice.reducer;
+export const { setTables } = tableSlice.actions;

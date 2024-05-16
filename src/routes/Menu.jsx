@@ -23,8 +23,9 @@ function Menu() {
     dispatch(getMenu())
   }, [dispatch])
 
-  const addToCart = (id, quantity = 1) => {
-    dispatch(addToUserOrder({ id, quantity }))
+  const addToCart = (dish, quantity = 1) => {
+    const dishWithQuantity = { ...dish, quantity };
+    dispatch(addToUserOrder(dishWithQuantity))
   }
 
   if (loading) return <Loading text="Processing..." />
