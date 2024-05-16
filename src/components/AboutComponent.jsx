@@ -3,32 +3,28 @@ const AboutComponent = () => {
     {
       name: 'Our Story',
       description:
-        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum minus necessitatibus magni voluptas quae, delectus non inventore earum tempore eveniet, et ut deleniti illo odit ipsum? Veniam dolore nesciunt iure!',
+        "Gopi's was born from a love of sharing Ahmedabad's vibrant cuisine. We use generations-old recipes and locally sourced ingredients to create authentic dishes that bring people together for a taste of the city's rich culinary heritage.",
     },
     {
       name: 'Our Philosophy',
       description:
-        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum minus necessitatibus magni voluptas quae, delectus non inventore earum tempore eveniet, et ut deleniti illo odit ipsum? Veniam dolore nesciunt iure!',
+        "At Gopi's, we believe in celebrating the soul of Ahmedabad through food. We craft authentic dishes using fresh, local ingredients and generations-old recipes, fostering a warm and welcoming atmosphere for every guest to connect over a delicious journey of flavors.",
     },
-    {
-      name: 'Meet Our Chef',
-      description:
-        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum minus necessitatibus magni voluptas quae, delectus non inventore earum tempore eveniet, et ut deleniti illo odit ipsum? Veniam dolore nesciunt iure!',
-    },
+    ,
     {
       name: 'Our Commitment',
       description:
-        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum minus necessitatibus magni voluptas quae, delectus non inventore earum tempore eveniet, et ut deleniti illo odit ipsum? Veniam dolore nesciunt iure!',
+        "At Gopi's, we're dedicated to providing an exceptional dining experience that goes beyond just delicious food.",
     },
     {
       name: 'Community Engagement',
       description:
-        'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum minus necessitatibus magni voluptas quae, delectus non inventore earum tempore eveniet, et ut deleniti illo odit ipsum? Veniam dolore nesciunt iure!',
+        "At Gopi's, we believe food is more than sustenance; it's a thread that weaves communities together.  That's why we're passionate about engaging with Ahmedabad and its vibrant people",
     },
     {
       name: 'Visit Us',
       description:
-        'Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.',
+        "Ready to embark on a delicious adventure through the heart of Ahmedabad? We invite you to visit Gopi's, a haven of authentic flavors and warm hospitality. Savor the rich culinary heritage of the city with every bite, prepared using fresh, seasonal ingredients and generations-old recipes."        
     },
   ]
   return (

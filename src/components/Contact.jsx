@@ -9,8 +9,8 @@ const Contact = () => {
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
             <div>
               <h2 className="text-3xl font-bold tracking-tight">Get in touch</h2>
-              <p className="mt-4 leading-7 text-xl text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sit quisquam placeat nulla, inventore rem ipsam culpa incidunt necessitatibus minus magnam repellat.
+              <p className="mt-4 leading-7 text-xl text-gray-400">
+              Let's connect and experience the flavors of Ahmedabad together! Here are the ways you can reach us
               </p>
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
@@ -23,15 +23,13 @@ const Contact = () => {
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 pt-16 lg:grid-cols-3">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-gray-300">Locations</h2>
-              <p className="mt-4 leading-7 text-xl text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sit quisquam placeat nulla.
+              <p className="mt-4 leading-7 text-xl text-gray-400">
+              In the Heart of Ahmedabad
               </p>
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
-              <AddressCard street='4556 Brendan Ferry' city='Los Angeles, CA 90210' />
-              <AddressCard street='886 Walter Street' city='New York, NY 12345' />
-              <AddressCard street='7363 Cynthia Pass' city='Toronto, ON N3Y 4H8' />
-              <AddressCard street='726 Mavis Island' city='Chicago, IL 60601' />
+              <AddressCard street='1-5, Ground, Sahjanand Palace, 100 Feet Anand Nagar Rd, Anand Nagar, Jodhpur Village' city='Ahmedabad, Gujarat 380015 ' />
+              <AddressCard street='Avadhesh Huse, Ground Floor, Off, Ashram Rd, Pritam Nagar, Ellisbridge' city='Ahmedabad, Gujarat 380006' />
             </div>
           </div>
         </div >

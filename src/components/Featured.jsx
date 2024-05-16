@@ -1,22 +1,21 @@
 const features = [
   {
-    name: 'Adventure-ready',
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptates quas laudantium dicta suscipit consequatur eius dolor sint vel labore possimus saepe minus, obcaecati consequuntur nulla veritatis consectetur sequi harum?",
+    name: 'A Glimpse of Ahmedabad',
+    description: "Immerse yourself in the true spirit of Ahmedabad with our selection of local favorites. Savor the aromatic curries simmered to perfection, the fluffy rotis cooked on a tawa, and the delightful street food specialties. Every bite is a journey through the city's rich culinary heritage.", 
     imageSrc: 'image1.avif',
     imageAlt: 'Printed photo of bag being tossed into the sky on top of grass.',
   },
   {
-    name: 'Minimal and clean',
+    name: 'Gujarati Gems',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptates quas laudantium dicta suscipit consequatur eius dolor sint vel labore possimus saepe minus, obcaecati consequuntur nulla veritatis consectetur sequi harum?",
+      "Experience the essence of Gujarati cuisine with our authentic dishes. We use traditional recipes passed down through generations, featuring a beautiful balance of sweet, savory, and sour flavors. From the creamy kadhi to the tangy dhokla, our Gujarati selection is a celebration of local flavors.",
     imageSrc: 'image4.avif',
     imageAlt: 'Double stitched black canvas hook loop.',
   },
   {
-    name: 'Organized',
+    name: 'Kathiawadi Delicacies',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptates quas laudantium dicta suscipit consequatur eius dolor sint vel labore possimus saepe minus, obcaecati consequuntur nulla veritatis consectetur sequi harum?",
+      "Embark on a culinary adventure to the Kathiawar region with our selection of robust and flavorful dishes. Our chefs use bold spices and unique cooking techniques to create dishes like the fiery mutton curry and the comforting sev tamatar sabzi. Each bite is an explosion of taste that will leave you wanting more.",
     imageSrc: 'image3.jpg',
     imageAlt: 'Black canvas body with chrome zipper and key ring.',
   },
@@ -27,9 +26,9 @@ const Featured = () => {
     <div className="mx-auto max-w-7xl sm:px-2 lg:px-4">
       <div className="mx-auto max-w-2xl px-4 lg:max-w-none">
         <div className="max-w-3xl">
-          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Lorem Ipusem</p>
-          <p className="mt-4 text-xl text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repudiandae consequuntur eum quidem nemo distinctio non, repellendus natus, quod assumenda architecto, deserunt fugiat aliquam animi quam similique quo? Harum, possimus.
+          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Featured</p>
+          <p className="mt-4 text-xl text-gray-400">
+          Indulge in our culinary creations that showcase the best of Ahmedabad's vibrant food scene. We use only the freshest seasonal ingredients, and our chefs weave their magic to present innovative dishes that tantalize your taste buds.
           </p>
         </div>
 

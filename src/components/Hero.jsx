@@ -11,7 +11,7 @@ const Hero = () => {
                 {`Gopi's food in the Heart of the City.`}
               </h1>
               <p className="relative mt-6 text-lg leading-8 text-gray-400 sm:max-w-md lg:max-w-none">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, nihil nostrum sunt magni dolorem perferendis minima porro nulla aliquid cumque sint tempora neque beatae soluta earum corrupti animi, harum veniam?
+              Experience the vibrant flavors of Ahmedabad at Gopi's, a haven of delicious traditional cuisine nestled right in the heart of the city. We offer a warm and inviting atmosphere perfect for a casual lunch, a special occasion, or an evening out exploring the city's culinary delights.  
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <Link to='/table'>
